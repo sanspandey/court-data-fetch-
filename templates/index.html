@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case_status</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h2>Search Case Details (court)</h2>
+    <form method='POST' action="/fetch">
+        <label for="case_type">Case Type : </label>
+        <select name="case_type" required>
+    <option value="">--Select Case Type--</option>
+    <option value="ARB.A.">ARB.A. - Arbitration Appeal</option>
+    <option value="BAIL APPLN.">BAIL APPLN. - Bail Application</option>
+    <option value="C.M.">C.M. - Civil Miscellaneous</option>
+    <option value="CRL.M.C.">CRL.M.C. - Criminal Misc. Case</option>
+    <option value="W.P.(C)">W.P.(C) - Writ Petition Civil</option>
+    <option value="W.P.(CRL)">W.P.(CRL) - Writ Petition Criminal</option>
+    <option value="FAO">FAO - First Appeal Order</option>
+    <option value="RSA">RSA - Regular Second Appeal</option>
+    <option value="CS(OS)">CS(OS) - Civil Suit Original Side</option>
+    <option value="CS(COMM)">CS(COMM) - Commercial Suit</option>
+    <option value="TEST.CAS.">TEST.CAS. - Testamentary Case</option>
+    <option value="CRL.A.">CRL.A. - Criminal Appeal</option>
+    <option value="CRL.REV.P.">CRL.REV.P. - Criminal Revision Petition</option>
+    <option value="LPA">LPA - Letters Patent Appeal</option>
+    <option value="MAC.APP.">MAC.APP. - Motor Accident Claim Appeal</option>
+    <option value="RC.REV.">RC.REV. - Rent Control Revision</option>
+    <option value="CM(M)">CM(M) - Civil Miscellaneous (Main)</option>
+    <option value="RFA">RFA - Regular First Appeal</option>
+    <option value="CRL.M.A.">CRL.M.A. - Criminal Misc. Application</option>
+    <option value="ARB.P.">ARB.P. - Arbitration Petition</option>
+    <option value="O.M.P.">O.M.P. - Original Miscellaneous Petition</option>
+    <option value="CRL.W.P.">CRL.W.P. - Criminal Writ Petition</option>
+    </select>
+<br>
+        <label for="case_number">Case Number : </label>
+        <input type="text" id="case_number" name="case_number" placeholder="e.g., type">
+
+        <label for="case_year">Filling Year : </label>
+        <input type="text" id="case_year" name="filling_year" placeholder="e.g., year">
+
+        <button type="submit"> Fetch Case Info</button>
+    </form>
+    
+</body>
+</html>

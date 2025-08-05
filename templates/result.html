@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="../static/result.css">
+</head>
+<body>
+    <h2>Case Details</h2>
+
+    {% if error %}
+        <p style="color : red; text-align : center"> {{error}}</p>
+        <div style="text-align: center;">
+            <a href="/">Try another case</a>
+        </div>
+
+    {% else %}
+        <div class="container">
+            <p><strong>Case Type:</strong> {{ case_type }}</p>
+            <p><strong>Case Number:</strong> {{ case_number }}</p>
+            <p><strong>Filing Year:</strong> {{ filling_year }}</p>
+            <hr>
+            <p><strong>Parties:</strong> {{ result.parties }}</p>
+            <p><strong>Filing Date:</strong> {{ result.filling_date }}</p>
+            <p><strong>Next Hearing Date:</strong> {{ result.next_hearing_date }}</p>
+            <p><strong>Order PDF:</strong> 
+                {% if result.pdf_link %}
+                    <a href="{{ result.pdf_link }}" target="_blank">Download</a>
+                {% else %}
+                    Not Available
+                {% endif %}
+            </p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="/">Search another case</a>
+        </div>
+    {% endif %}
+</body>
+</html>
